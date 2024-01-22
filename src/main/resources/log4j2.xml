@@ -1,0 +1,19 @@
+<Configuration status="INFO">
+    <CustomLevels>
+        <CustomLevel name="VERBOSE" intLevel="550" />
+    </CustomLevels>
+    <Appenders>
+        <Console name="console" target="SYSTEM_OUT">
+            <PatternLayout>
+                <pattern>
+                    %d{yyyy-MM-dd HH:mm:ss.SSS} [%t] %-5level %logger{36} - %highlight{%msg}{FATAL=red, ERROR=red, WARN=yellow, INFO=green, DEBUG=white, TRACE=blue}%n
+                </pattern>
+            </PatternLayout>
+        </Console>
+    </Appenders>
+    <Loggers>
+        <Root level="trace">
+            <AppenderRef ref="console" />
+        </Root>
+    </Loggers>
+</Configuration>
